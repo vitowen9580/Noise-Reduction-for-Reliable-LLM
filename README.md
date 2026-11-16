@@ -48,13 +48,7 @@ datasets/
 2. Run the following command:
 
    ```bash
-   python white_noise_dataset_generator.py --SNR $SNR -type $type
-   ```
-
-   Example:
-
-   ```bash
-   python white_noise_dataset_generator.py --SNR -8 -type 4
+   python white_noise_dataset_generator.py --SNR -8 -type 2,4,7
    ```
 
    **Parameters:**
@@ -62,6 +56,8 @@ datasets/
    - **SNR:** Signal-to-Noise Ratio. Available values: `[-8, -4, 4]`.
      - Lower SNR indicates stronger background noise.
    - **type:** Background noise category. Available values: `0–9`.
+     - Multiple noise types can be selected using commas (`,`).
+     - Example: `-type 2,4,7` selects `children_playing`, `drilling`, and `jackhammer`.
 
      | Type | Noise |
      |---|---|
@@ -80,6 +76,39 @@ The generated noisy audio will be automatically saved in:
 
 ```text
 datasets/testA/
+```
+
+### Step 3. Run Noise Reduction and LLM Evaluation
+
+1. Make sure the following dataset files and directories are available:
+
+   ```text
+   datasets/
+   ├── syntec220plus30qa.pdf
+   ├── syntec_220plus_30qa.json
+   ├── UrbanSound8K/
+   ├── testA/
+   └── testB/
+   ```
+
+2. Run the evaluation separately for Chinese and English audio:
+
+   **Chinese:**
+   ```bash
+   python main.py --type CH
+   ```
+
+   **English:**
+   ```bash
+   python main.py --type EN
+   ```
+
+### Step 4. Visualize Results
+
+After completing the experiments, generate the accuracy comparison plot:
+
+```bash
+python plot_accuracy_comparison.py
 ```
 
 ### Step 4. Visualize Results
