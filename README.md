@@ -111,10 +111,15 @@ After completing the experiments, generate the accuracy comparison plot:
 python plot_accuracy_comparison.py
 ```
 
-### Step 4. Visualize Results
+## Acknowledgements and References
 
-After completing the experiments, generate the accuracy comparison plot:
+This project is developed with reference to the following works:
 
-```bash
-python plot_accuracy_comparison.py
-```
+**Code Development References**
+- [Noise2Noise: Audio Denoising without Clean Training Data](https://github.com/madhavmk/Noise2Noise-audio_denoising_without_clean_training_data)
+- *Focus Then Listen: An Empirical Study of Plug-and-Play Audio Enhancer for Noise-Robust Large Audio Language Models.*
+
+**Research Reference**
+- *Robust Tool Wear Prediction under Novel Operating Conditions via Physics-Guided Unsupervised Domain Adaptation.*
+
+We sincerely thank the authors for their valuable contributions and research, which provided useful references for the development and experimental design of this project.
