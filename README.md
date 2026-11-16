@@ -14,19 +14,30 @@ This project investigates the impact of background noise and speech enhancement 
 
 1. Provide the original PDF to an LLM (e.g., ChatGPT) to generate question-answer pairs in JSON format.
 2. Place both the original PDF and the generated JSON file in the `dataset/` directory.
-
-For example:
-
-```text
-dataset/
-├── syntec220plus30qa.pdf
-└── syntec_220plus_30qa.json
-```
 3. Use [ElevenLabs Text to Speech](https://elevenlabs.io/app/speech-synthesis/text-to-speech) to convert the questions into MP3 audio.
 4. Convert MP3 files to WAV:
 
 ```bash
-python mp3towav.py
+python mp3towav.py --input $folder$ --output datasets/testB
+```
+
+**Parameters:**
+- `--input`: Input folder containing MP3 files.
+- `--output`: Output folder for converted WAV files.
+- `--delete-source`: Optional. Delete original MP3 files after successful conversion. Omit this flag to keep the MP3 files.
+
+
+**Final directory structure:**
+
+```text
+dataset/
+├── syntec220plus30qa.pdf
+├── syntec_220plus_30qa.json
+└── testB/
+    ├── Q001.wav
+    ├── Q002.wav
+    └── ...
+```
 ```
 ### Step 2. Generate Noisy Audio
 
