@@ -28,3 +28,64 @@ dataset/
 ```bash
 python mp3towav.py
 ```
+### Step 2. Generate Noisy Audio
+
+1. Download the **UrbanSound8K** dataset:
+
+[UrbanSound8K Dataset](https://urbansounddataset.weebly.com/urbansound8k.html)
+
+After downloading, extract the dataset into the `datasets/` directory.
+
+For example:
+
+```text
+datasets/
+├── UrbanSound8K/
+├── testA/
+└── testB/
+```
+
+2. Run the following command:
+
+   ```bash
+   python white_noise_dataset_generator.py --SNR $SNR -type $type
+   ```
+
+   Example:
+
+   ```bash
+   python white_noise_dataset_generator.py --SNR -8 -type 4
+   ```
+
+   **Parameters:**
+
+   - **SNR:** Signal-to-Noise Ratio. Available values: `[-8, -4, 4]`.
+     - Lower SNR indicates stronger background noise.
+   - **type:** Background noise category. Available values: `0–9`.
+
+     | Type | Noise |
+     |---|---|
+     | 0 | air_conditioner |
+     | 1 | car_horn |
+     | 2 | children_playing |
+     | 3 | dog_bark |
+     | 4 | drilling |
+     | 5 | engine_idling |
+     | 6 | gun_shot |
+     | 7 | jackhammer |
+     | 8 | siren |
+     | 9 | street_music |
+
+The generated noisy audio will be automatically saved in:
+
+```text
+datasets/testA/
+```
+
+### Step 4. Visualize Results
+
+After completing the experiments, generate the accuracy comparison plot:
+
+```bash
+python plot_accuracy_comparison.py
+```
