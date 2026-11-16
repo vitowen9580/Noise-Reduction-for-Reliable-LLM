@@ -19,18 +19,6 @@ This project investigates the impact of background noise and speech enhancement 
    - `--input`: Input folder containing MP3 files.
    - `--output`: Output folder for converted WAV files.
 
-   **Final directory structure:**
-
-   ```text
-   datasets/
-   ├── your_document.pdf
-   ├── your_questions.json
-   └── testB/
-       ├── Q001.wav
-       ├── Q002.wav
-       └── ...
-   ```
-
 ### Step 2. Generate Noisy Audio
 
 1. Download the **UrbanSound8K** dataset: [UrbanSound8K Dataset](https://urbansounddataset.weebly.com/urbansound8k.html). After downloading, extract the dataset into the `datasets/` directory.
@@ -44,6 +32,38 @@ This project investigates the impact of background noise and speech enhancement 
    **Parameters:**
    - `--SNR`: Signal-to-Noise Ratio. Available values: `-8`, `-4`, `4`. Lower values indicate stronger noise.
    - `-type`: Noise types (`0–9`). Multiple types can be selected using commas (e.g., `2,4,7` selects `children_playing`, `drilling`, and `jackhammer`). Available types: `0` air_conditioner, `1` car_horn, `2` children_playing, `3` dog_bark, `4` drilling, `5` engine_idling, `6` gun_shot, `7` jackhammer, `8` siren, `9` street_music.
+
+
+### Step 3. Run Noise Reduction and LLM Evaluation
+
+1. Make sure the required PDF, QA JSON, and audio directories are available in `datasets/`.
+
+2. Run the evaluation separately for Chinese and English audio:
+
+   ```bash
+   python main.py --type $language$ --pdf $your_pdf_path$ --qa $your_json_path$
+   ```
+
+   **Parameters:**
+   - `--type`: Language selection (`EN` for English, `CH` for Chinese).
+   - `--pdf`: Path to the reference PDF document for RAG retrieval.
+   - `--qa`: Path to the QA JSON file containing questions and reference answers.
+
+### Step 4. System Architecture and Experimental Results
+
+**System Architecture**
+
+<p align="center">
+  <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
+</p>
+
+**Visualize Results**
+
+After completing the experiments, generate the accuracy comparison plots:
+
+```bash
+python plot_accuracy_comparison.py
+```
 
    **Final directory structure:**
 
@@ -79,37 +99,6 @@ Project/
 └── README.md
 ```
    ```
-
-### Step 3. Run Noise Reduction and LLM Evaluation
-
-1. Make sure the required PDF, QA JSON, and audio directories are available in `datasets/`.
-
-2. Run the evaluation separately for Chinese and English audio:
-
-   ```bash
-   python main.py --type $language$ --pdf $your_pdf_path$ --qa $your_json_path$
-   ```
-
-   **Parameters:**
-   - `--type`: Language selection (`EN` for English, `CH` for Chinese).
-   - `--pdf`: Path to the reference PDF document for RAG retrieval.
-   - `--qa`: Path to the QA JSON file containing questions and reference answers.
-
-### Step 4. System Architecture and Experimental Results
-
-**System Architecture**
-
-<p align="center">
-  <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
-</p>
-
-**Visualize Results**
-
-After completing the experiments, generate the accuracy comparison plots:
-
-```bash
-python plot_accuracy_comparison.py
-```
 
 ## Experimental Results
 
