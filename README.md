@@ -1,8 +1,8 @@
-# Noise Reduction for Reliable LLM
+## Noise Reduction for Reliable LLM
 
 This project investigates the impact of background noise and speech enhancement on Large Language Model (LLM)-based question answering in industrial environments.
 
-**System Architecture**
+### System Architecture
 
 <p align="center">
   <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
