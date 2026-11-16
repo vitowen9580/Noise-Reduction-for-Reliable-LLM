@@ -8,6 +8,38 @@ This project investigates the impact of background noise and speech enhancement 
   <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
 </p>
 
+
+ **Final directory structure:**
+
+```text
+Project/
+├── datasets/
+│   ├── UrbanSound8K/
+│   ├── testA/
+│   ├── testB/
+│   ├── your_document.pdf
+│   └── your_questions.json
+│
+├── models/
+│   ├── faster-whisper-large-v3-turbo/
+│   ├── faster-whisper-small.en/
+│   ├── bge-small-zh-v1.5/
+│   ├── bge-reranker-v2-m3/
+│   ├── gemma-4-31B/
+│   └── ...
+│
+├── Figure/
+├── result/
+├── outputs/
+├── utils/
+│
+├── main.py
+├── mp3towav.py
+├── plot_accuracy_comparison.py
+├── white_noise_dataset_generator.py
+└── README.md
+```
+
 ## Experimental Workflow
 
 ### Step 1. Generate Question Dataset and Speech Audio
@@ -55,46 +87,11 @@ This project investigates the impact of background noise and speech enhancement 
    - `--pdf`: Path to the reference PDF document for RAG retrieval.
    - `--qa`: Path to the QA JSON file containing questions and reference answers.
 
-### Step 4. System Architecture and Experimental Results
-
-
-**Visualize Results**
-
+### Step 4. Visualize
 After completing the experiments, generate the accuracy comparison plots:
 
 ```bash
 python plot_accuracy_comparison.py
-```
-
-   **Final directory structure:**
-
-```text
-Project/
-├── datasets/
-│   ├── UrbanSound8K/
-│   ├── testA/
-│   ├── testB/
-│   ├── your_document.pdf
-│   └── your_questions.json
-│
-├── models/
-│   ├── faster-whisper-large-v3-turbo/
-│   ├── faster-whisper-small.en/
-│   ├── bge-small-zh-v1.5/
-│   ├── bge-reranker-v2-m3/
-│   ├── gemma-4-31B/
-│   └── ...
-│
-├── Figure/
-├── result/
-├── outputs/
-├── utils/
-│
-├── main.py
-├── mp3towav.py
-├── plot_accuracy_comparison.py
-├── white_noise_dataset_generator.py
-└── README.md
 ```
 
 
