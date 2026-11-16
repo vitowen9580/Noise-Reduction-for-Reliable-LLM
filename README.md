@@ -1,6 +1,11 @@
 # Noise Reduction for Reliable LLM
 
 This project investigates the impact of background noise and speech enhancement on Large Language Model (LLM)-based question answering in industrial environments.
+**System Architecture**
+
+<p align="center">
+  <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
+</p>
 
 ## Experimental Workflow
 
@@ -51,11 +56,6 @@ This project investigates the impact of background noise and speech enhancement 
 
 ### Step 4. System Architecture and Experimental Results
 
-**System Architecture**
-
-<p align="center">
-  <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
-</p>
 
 **Visualize Results**
 
@@ -66,9 +66,6 @@ python plot_accuracy_comparison.py
 ```
 
    **Final directory structure:**
-
-   ```text
-   **Project Directory Structure:**
 
 ```text
 Project/
@@ -98,7 +95,7 @@ Project/
 ├── white_noise_dataset_generator.py
 └── README.md
 ```
-   ```
+
 
 ## Experimental Results
 
