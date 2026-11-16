@@ -111,12 +111,22 @@ After completing the experiments, generate the accuracy comparison plot:
 python plot_accuracy_comparison.py
 ```
 
-### Experimental Results
+## Experimental Results
+
+### English Results (EN)
 
 <p align="center">
   <img src="result/EN/Chart1_Grouped_Single_Noises.png" width="32%">
   <img src="result/EN/Chart2_Grouped_Noise_Complexity.png" width="32%">
   <img src="result/EN/Chart3_Grouped_SNR_Levels.png" width="32%">
+</p>
+
+### Chinese Results (CH)
+
+<p align="center">
+  <img src="result/CH/Chart1_Grouped_Single_Noises.png" width="32%">
+  <img src="result/CH/Chart2_Grouped_Noise_Complexity.png" width="32%">
+  <img src="result/CH/Chart3_Grouped_SNR_Levels.png" width="32%">
 </p>
 
 ## Acknowledgements and References
