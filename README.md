@@ -107,16 +107,16 @@ datasets/testA/
 
 After completing the experiments, generate the accuracy comparison plot:
 
-```bash
+```bashhttps://github.com/vitowen9580/Noise-Reduction-for-Reliable-LLM/tree/main
 python plot_accuracy_comparison.py
 ```
 
 ### Experimental Results
 
 <p align="center">
-  <img src="result/Robust_pdf_result/7_H/outputs/Chart1_Grouped_Single_Noises.png" width="32%">
-  <img src="result/Robust_pdf_result/7_H/outputs/Chart2_Grouped_Noise_Complexity.png" width="32%">
-  <img src="result/Robust_pdf_result/7_H/outputs/Chart3_Grouped_SNR_Levels.png" width="32%">
+  <img src="result/EN/Chart1_Grouped_Single_Noises.png" width="32%">
+  <img src="result/EN/Chart2_Grouped_Noise_Complexity.png" width="32%">
+  <img src="result/EN/Chart3_Grouped_SNR_Levels.png" width="32%">
 </p>
 
 ## Acknowledgements and References
