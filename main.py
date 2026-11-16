@@ -38,7 +38,7 @@ MODEL_CONFIGS: Dict[str, Dict[str, Any]] = {
 
 
 # ============================================================
-# Model Paths
+# Model Paths  
 # ============================================================
 
 EMBEDDING_MODEL = ROOT / "models" / "bge-small-zh-v1.5"
