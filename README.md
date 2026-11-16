@@ -21,9 +21,10 @@ For example:
 dataset/
 ├── syntec220plus30qa.pdf
 └── syntec_220plus_30qa.json
-
+```
 3. Use [ElevenLabs Text to Speech](https://elevenlabs.io/app/speech-synthesis/text-to-speech) to convert the questions into MP3 audio.
 4. Convert MP3 files to WAV:
 
 ```bash
 python mp3towav.py
+```
