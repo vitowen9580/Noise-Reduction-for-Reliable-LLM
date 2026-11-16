@@ -13,7 +13,7 @@ This project investigates the impact of background noise and speech enhancement 
 | Model | Configuration |
 |---|---|
 | **ASR** | • English: `faster-whisper-small.en`<br>• Chinese: `faster-whisper-large-v3-turbo` |
-| **Noise Reduction** | SNSep (Yin et al., 2026) [1] |
+| **Noise Reduction** | SNSep (Yin et al., 2026) (https://arxiv.org/abs/2603.04862)|
 | **Embedding** | `bge-small-zh-v1.5` |
 | **Reranker** | `bge-reranker-v2-m3` |
 | **LLM** | `gemma-4-31B` |
