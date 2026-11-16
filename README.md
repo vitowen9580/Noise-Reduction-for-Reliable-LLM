@@ -36,7 +36,6 @@ Project/
 │   ├── faster-whisper-small.en/
 │   ├── bge-small-zh-v1.5/
 │   ├── bge-reranker-v2-m3/
-│   ├── bge-small-zh-v1.5/
 │   ├── gemma-4-31B/
 │   └── Qwen2.5-32B-Instruct/
 ├── outputs/
