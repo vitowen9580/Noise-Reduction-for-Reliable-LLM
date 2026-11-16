@@ -27,17 +27,12 @@ Project/
 │   ├── bge-reranker-v2-m3/
 │   ├── gemma-4-31B/
 │   └── ...
-│
-├── Figure/
-├── result/
 ├── outputs/
 ├── utils/
-│
 ├── main.py
 ├── mp3towav.py
 ├── plot_accuracy_comparison.py
 ├── white_noise_dataset_generator.py
-└── README.md
 ```
 
 ## Experimental Workflow
