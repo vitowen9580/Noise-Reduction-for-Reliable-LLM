@@ -24,8 +24,6 @@ python mp3towav.py --input $folder$ --output datasets/testB
 **Parameters:**
 - `--input`: Input folder containing MP3 files.
 - `--output`: Output folder for converted WAV files.
-- `--delete-source`: Optional. Delete original MP3 files after successful conversion. Omit this flag to keep the MP3 files.
-
 
 **Final directory structure:**
 
