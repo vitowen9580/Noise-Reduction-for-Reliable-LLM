@@ -43,7 +43,7 @@ Project/
 ├── main.py
 ├── mp3towav.py
 ├── plot_accuracy_comparison.py
-├── white_noise_dataset_generator.py
+├── noise_audio_generate.py
 ```
 
 ## Experimental Workflow
