@@ -39,52 +39,31 @@ dataset/
 
 ### Step 2. Generate Noisy Audio
 
-1. Download the **UrbanSound8K** dataset:
+1. Download the **UrbanSound8K** dataset:[UrbanSound8K Dataset](https://urbansounddataset.weebly.com/urbansound8k.html) After downloading, extract the dataset into the `datasets/` directory.
 
-[UrbanSound8K Dataset](https://urbansounddataset.weebly.com/urbansound8k.html)
-
-After downloading, extract the dataset into the `datasets/` directory.
-
-For example:
-
-```text
-datasets/
-├── UrbanSound8K/
-├── testA/
-└── testB/
-```
-
-2. Run the following command:
+2. Run the following command. The generated noisy audio will be saved in `dataset/`.
 
    ```bash
    python white_noise_dataset_generator.py --SNR -8 -type 2,4,7
    ```
 
-   **Parameters:**
-
-   - **SNR:** Signal-to-Noise Ratio. Available values: `[-8, -4, 4]`.
-     - Lower SNR indicates stronger background noise.
-   - **type:** Background noise category. Available values: `0–9`.
-     - Multiple noise types can be selected using commas (`,`).
-     - Example: `-type 2,4,7` selects `children_playing`, `drilling`, and `jackhammer`.
-
-     | Type | Noise |
-     |---|---|
-     | 0 | air_conditioner |
-     | 1 | car_horn |
-     | 2 | children_playing |
-     | 3 | dog_bark |
-     | 4 | drilling |
-     | 5 | engine_idling |
-     | 6 | gun_shot |
-     | 7 | jackhammer |
-     | 8 | siren |
-     | 9 | street_music |
-
-The generated noisy audio will be automatically saved in:
+**Parameters:**
+- `--SNR`: Signal-to-Noise Ratio. Available values: `-8`, `-4`, `4`. Lower values indicate stronger noise.
+- `-type`: Noise types (`0–9`). Multiple types can be selected using commas. Available types: `0` air_conditioner, `1` car_horn, `2` children_playing, `3` dog_bark, `4` drilling, `5` engine_idling, `6` gun_shot, `7` jackhammer, `8` siren, `9` street_music.
 
 ```text
-datasets/testA/
+dataset/
+├── syntec220plus30qa.pdf
+├── syntec_220plus_30qa.json
+├── UrbanSound8K
+└── testB/
+    ├── Q001.wav
+    ├── Q002.wav
+    └── ...
+└── testA/
+    ├── Q001.wav
+    ├── Q002.wav
+    └── ...
 ```
 
 ### Step 3. Run Noise Reduction and LLM Evaluation
