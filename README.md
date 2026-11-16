@@ -44,12 +44,12 @@ dataset/
 2. Run the following command. The generated noisy audio will be saved in `dataset/`.
 
    ```bash
-   python white_noise_dataset_generator.py --SNR -8 -type 2,4,7
+   python white_noise_dataset_generator.py --SNR $SNR$ -type $type$
    ```
 
 **Parameters:**
 - `--SNR`: Signal-to-Noise Ratio. Available values: `-8`, `-4`, `4`. Lower values indicate stronger noise.
-- `-type`: Noise types (`0–9`). Multiple types can be selected using commas. Available types: `0` air_conditioner, `1` car_horn, `2` children_playing, `3` dog_bark, `4` drilling, `5` engine_idling, `6` gun_shot, `7` jackhammer, `8` siren, `9` street_music.
+- `-type`: Noise types (`0–9`). Multiple types can be selected using commas (e.g., `2,4,7` selects `children_playing`, `drilling`, and `jackhammer`). Available types: `0` air_conditioner, `1` car_horn, `2` children_playing, `3` dog_bark, `4` drilling, `5` engine_idling, `6` gun_shot, `7` jackhammer, `8` siren, `9` street_music.
 
 ```text
 dataset/
