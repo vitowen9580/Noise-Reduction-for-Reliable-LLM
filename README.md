@@ -83,7 +83,7 @@ dataset/
 
    **Chinese:**
    ```bash
-   python main.py --type CH
+   python main.py --type CH --pdf datasets/my_document.pdf --qa datasets/my_questions.json
    ```
 
    **English:**
