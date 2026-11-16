@@ -81,15 +81,14 @@ dataset/
 
 2. Run the evaluation separately for Chinese and English audio:
 
-   **Chinese:**
    ```bash
-   python main.py --type CH --pdf datasets/my_document.pdf --qa datasets/my_questions.json
+   python main.py --type $language$ --pdf $your_pdf_path$ --qa $your_json_path$
    ```
 
-   **English:**
-   ```bash
-   python main.py --type EN
-   ```
+   **Parameters:**
+   - `--type`: Language selection (`EN` for English, `CH` for Chinese).
+   - `--pdf`: Path to the reference PDF document for RAG retrieval.
+   - `--qa`: Path to the QA JSON file containing questions and reference answers.
 
 ### Step 4. Visualize Results
 
