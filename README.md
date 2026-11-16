@@ -38,7 +38,7 @@ dataset/
     ├── Q002.wav
     └── ...
 ```
-```
+
 ### Step 2. Generate Noisy Audio
 
 1. Download the **UrbanSound8K** dataset:
