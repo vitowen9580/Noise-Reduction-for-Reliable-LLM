@@ -8,6 +8,17 @@ This project investigates the impact of background noise and speech enhancement 
   <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
 </p>
 
+## Model Configuration
+
+| Model | Configuration |
+|---|---|
+| **ASR** | • English: `faster-whisper-small.en`<br>• Chinese: `faster-whisper-large-v3-turbo` |
+| **Noise Reduction** | SNSep (Yin et al., 2026) [1] |
+| **Embedding** | `bge-small-zh-v1.5` |
+| **Reranker** | `bge-reranker-v2-m3` |
+| **LLM** | `gemma-4-31B` |
+| **Critic** | `Qwen2.5-32B-Instruct` |
+| **Background Noise** | Human Voice Noise, Drilling Noise, Engine Noise |
 
  **Final directory structure:**
 
@@ -25,8 +36,9 @@ Project/
 │   ├── faster-whisper-small.en/
 │   ├── bge-small-zh-v1.5/
 │   ├── bge-reranker-v2-m3/
+│   ├── bge-small-zh-v1.5/
 │   ├── gemma-4-31B/
-│   └── ...
+│   └── Qwen2.5-32B-Instruct/
 ├── outputs/
 ├── utils/
 ├── main.py
