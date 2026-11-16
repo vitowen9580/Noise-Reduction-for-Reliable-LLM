@@ -5,7 +5,7 @@ This project investigates the impact of background noise and speech enhancement 
 ## System Architecture
 
 <p align="center">
-  <img src="Figure/architecture.png" alt="System Architecture" width="100%">
+  <img src="Figure/Figure1.png" alt="System Architecture" width="100%">
 </p>
 
 ## Experimental Workflow
