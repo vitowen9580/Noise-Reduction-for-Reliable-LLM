@@ -46,6 +46,12 @@ Project/
 ├── noise_audio_generate.py
 ```
 
+## Dataset
+
+The datasets can be obtained from the following link:
+
+- [Google Drive – Dataset](https://drive.google.com/drive/folders/1978MgaVPepQOKzN33KrXXKZHWgRpO7BH?usp=sharing)
+- 
 ## Experimental Workflow
 
 ### Step 1. Generate Question Dataset and Speech Audio
