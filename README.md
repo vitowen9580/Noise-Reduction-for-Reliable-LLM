@@ -48,9 +48,8 @@ Project/
 
 ## Dataset
 
-The datasets can be obtained from the following link:
+The datasets can be obtained from the following link:[Dataset](https://drive.google.com/drive/folders/1978MgaVPepQOKzN33KrXXKZHWgRpO7BH?usp=sharing)
 
-- [Dataset](https://drive.google.com/drive/folders/1978MgaVPepQOKzN33KrXXKZHWgRpO7BH?usp=sharing)
 
 ## Experimental Workflow
 
